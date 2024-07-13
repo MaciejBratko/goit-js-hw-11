@@ -7,10 +7,12 @@
     <title>goit-js-hw-10</title>
     
     <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-678a2d62.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-8c59ed88.js">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-1cd1f9d9.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-b0968310.css">
   </head>
   <body>
-    <section class="main">
+    <section class="search">
       <form>
         <input
           type="text"
@@ -18,9 +20,38 @@
           id="searchBar"
           placeholder="Search Images..."
         />
-        <button type="button">Search</button>
+        <button type="submit">Search</button>
       </form>
     </section>
+
+    <main class="gallery-container">
+      <div class="loader-container">
+        <div class="loader hidden"></div>
+      </div>
+      <ul id="gallery">
+        <!-- <li>
+          <img src="" alt="" />
+          <ul class="image-properties">
+            <li class="likes">
+              <span class="likesText"></span>
+              <span class="likesValue"></span>
+            </li>
+            <li class="views">
+              <span class="viewsText"></span>
+              <span class="viewsValue"></span>
+            </li>
+            <li class="comments">
+              <span class="commentsText"></span>
+              <span class="commentsValue"></span>
+            </li>
+            <li class="downloads">
+              <span class="downloadsText"></span>
+              <span class="downloadsValue"></span>
+            </li>
+          </ul>
+        </li> -->
+      </ul>
+    </main>
 
     
   </body>
