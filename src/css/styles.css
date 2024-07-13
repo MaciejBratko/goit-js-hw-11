@@ -27,6 +27,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .main {
@@ -37,7 +39,7 @@ body {
 button {
   align-items: center;
   padding: 8px 16px;
-  width: 75px;
+  width: 91px;
   height: 40px;
   background-color: rgba(78, 117, 255, 1);
   border-radius: 8px;
@@ -51,26 +53,31 @@ button {
   color: rgba(255, 255, 255, 1);
 }
 
-button:disabled,
-button:disabled:hover {
-  background-color: rgba(207, 207, 207, 1);
-  color: rgba(152, 152, 152, 1);
-}
-
 button:hover {
   background-color: rgba(108, 140, 255, 1);
   color: rgba(255, 255, 255, 1);
 }
 
-.field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#searchBar {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 270px;
+  height: 38px;
+  margin: 0;
+  padding: 0;
 }
-.label {
-  font-family: Montserrat;
-  font-size: 16px;
+
+#searchBar::placeholder {
+  font-family: 'Montserrat';
+  font-style: normal;
   font-weight: 400;
+  font-size: 16px;
   line-height: 24px;
-  text-align: left;
+  letter-spacing: 0.04em;
+  color: #808080;
+  padding: 8px 16px;
+}
+
+.main > form {
+  padding-top: 36px;
 }
