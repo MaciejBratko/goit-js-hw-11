@@ -1,91 +1,159 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap';
 
 :root {
-  font-family: Montserrat;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background-color: #ffffffde;
   color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
+  font: 400 16px/24px Montserrat;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  font-family: Montserrat;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: Montserrat;
   margin: 0;
   padding: 0;
 }
 
-.main {
+.search {
   margin: 0;
   padding: 0;
 }
 
 button {
   align-items: center;
+  background-color: #4e75ffff;
+  border-radius: 8px;
+  border-width: 0;
+  color: #ffff;
+  font: 500 16px/24px 'Montserrat';
+  height: 40px;
+  letter-spacing: 0.04em;
   padding: 8px 16px;
   width: 91px;
-  height: 40px;
-  background-color: rgba(78, 117, 255, 1);
-  border-radius: 8px;
-  border-width: 0px;
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 1);
 }
 
 button:hover {
-  background-color: rgba(108, 140, 255, 1);
-  color: rgba(255, 255, 255, 1);
+  background-color: #6c8cffff;
+  color: #ffff;
 }
 
 #searchBar {
-  font-family: Montserrat;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.04em;
-  text-align: left;
-  border: 1px solid #808080;
+  border: 1px solid gray;
   border-radius: 4px;
-  width: 238px;
+  font: 400 16px/24px Montserrat;
   height: 22px;
+  letter-spacing: 0.04em;
   margin: 0;
   padding: 0;
   padding: 8px 16px;
+  text-align: left;
+  width: 238px;
 }
 
 #searchBar::placeholder {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  color: gray;
+  font: 400 16px/24px 'Montserrat';
   letter-spacing: 0.04em;
-  color: #808080;
 }
 
-/* #searchBar:: */
-
-.main > form {
+.search > form {
   padding-top: 36px;
+}
+
+img {
+  height: 200px;
+  object-fit: cover;
+  width: 360px;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  margin-top: 32px;
+  padding: 0;
+  padding: 0 156px;
+}
+
+#gallery > li {
+  border: 1px solid #808080ff;
+  flex: 1 1 calc(33.3333% - 48px);
+  height: 200px;
+  max-width: 360px;
+}
+
+.image-properties {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-115%);
+}
+
+.image-properties > li {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+}
+
+.image-properties > li > span:first-child {
+  color: #2e2f42ff;
+  font: 600 12px/16px Montserrat;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.image-properties > li > span:last-child {
+  color: #2e2f42ff;
+  font: 400 12px/24px Montserrat;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.loader-container {
+  top: 100px;
+  position: absolute;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
 }
