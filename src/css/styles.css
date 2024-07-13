@@ -59,12 +59,19 @@ button:hover {
 }
 
 #searchBar {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
   border: 1px solid #808080;
   border-radius: 4px;
-  width: 270px;
-  height: 38px;
+  width: 238px;
+  height: 22px;
   margin: 0;
   padding: 0;
+  padding: 8px 16px;
 }
 
 #searchBar::placeholder {
@@ -75,8 +82,9 @@ button:hover {
   line-height: 24px;
   letter-spacing: 0.04em;
   color: #808080;
-  padding: 8px 16px;
 }
+
+/* #searchBar:: */
 
 .main > form {
   padding-top: 36px;
